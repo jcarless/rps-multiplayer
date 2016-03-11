@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RPS Multiplayer</title>
+	<!-- reset code -->
+	<link rel="stylesheet" href="css/reset.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- my css -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- firebase -->
+	<script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+</head>
+<body>
+	
+	<div class="container-fluid">
+
+	<!-- jumbotron -->
+		<div class="row">
+			<div class="jumbotron">
+  				<h1>Rock Paper Scissors  <span><img src="images/icon175x175.png" alt="Rock Paper Scissors Icon"></span></h1>
+ 				 <p>You are player <span id='playerNumber'>1 <!-- player number variable --></span></p>  
+			</div>
+		</div>
+
+	<!-- game interface -->
+		<div class="row">
+
+		<!-- user div -->
+			<div class="col-xs-3 col-xs-offset-1">
+
+				<div class="panel panel-default">
+
+				  	<div class="panel-heading">
+
+				    	<h3 class="panel-title" id="userName">User <!-- User name variable --></h3>
+
+				  	</div>
+
+					<!-- rps buttons -->
+			  		<div class="panel-body">
+
+			    			<div id="rpsButtons">
+
+			    			<button type="button" class="btn btn-default"> <img id="rockButton" class='button' src="images/rock-paper-scissors-rock-icon.png" alt="Rock Icon"> </button>
+							
+							<button type="button" class="btn btn-default"> <img id="paperButton" class='button' src="images/Rock%20Paper%20Scissors%20Paper.ico" alt="Paper Icon"> </button>
+
+							<button type="button" class="btn btn-default"> <img id="scissorsButton" class='button' src="images/scissors-icon.png" alt="Scissors Icon"> </button>
+			    			</div>	
+
+			    			<div>
+			    				<div class="winLoss">Wins: <span id='userWins'>5<!-- win variable --></span>     Losses: <span id='userLosses'>2<!-- loss variable --></span></div>
+			    			</div>
+
+			    		</div>
+			  		</div> <!-- panel -->
+
+				</div> <!-- panel col -->
+
+		<!-- game action div -->
+			<div class="col-xs-3">
+				<div class="panel panel-default">
+
+				  	<div class="panel-heading">
+
+				    	<h3 class="panel-title" id="">Interface</h3>
+
+				  	</div>
+
+					<!-- rps buttons -->
+			  		<div class="panel-body">
+
+			    		</div>
+			  		</div> <!-- panel -->
+			</div>
+
+		<!-- opponent div -->
+			<div class="col-xs-3">
+
+				<div class="panel panel-default">
+
+				  	<div class="panel-heading">
+
+				    	<h3 class="panel-title" id="opponentName">Opponent <!-- opponent name variable --></h3>
+
+				  	</div>
+
+					<!-- opponent block -->
+			  		<div class="panel-body">
+
+			    			<div id="opponentBlock">
+
+			    			<img id="rpsGif"  src="images/Rock-Paper-Scissors-87015.gif" alt="RPS Gif">
+							
+			    			</div>	
+
+			    			<div>
+			    				<div class="winLoss">Wins: <span id='opponentWins'>5<!-- win variable --></span>     Losses: <span id='opponentLosses'>2<!-- loss variable --></span></div>
+			    			</div>
+
+			    		</div>
+
+			  		</div> <!-- panel -->
+			</div>
+
+		</div>
+		</div>
+
+	<!-- chat window -->
+		<div class="row">
+			
+		</div>
+
+	</div> <!-- .container -->
+
+
+	
+	<!-- jquery -->
+	<script src='https://code.jquery.com/jquery-2.2.1.js'></script>
+	<!-- javascript -->
+	<script type="text/javascript" src="javascript/app.js"></script>
+
+</body>
+</html>
